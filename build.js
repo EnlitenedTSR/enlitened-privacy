@@ -10,7 +10,7 @@ var data = {
     universityPrivacy
 };
 
-fs.writeFile('./enlighten_privacy.json', JSON.stringify(data), err => {
+fs.writeFile('./enlightened_privacy.json', JSON.stringify(data), err => {
     if (!err) {
         console.log('File compiled');
     }
