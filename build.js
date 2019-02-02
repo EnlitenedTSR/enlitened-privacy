@@ -5,9 +5,9 @@ var studentTerms = fs.readFileSync('./student-privacy/index.html', 'utf8');
 var universityPrivacy = fs.readFileSync('./university-privacy/index.html', 'utf8');
 
 var data = {
-    studentPrivacy,
-    studentTerms,
-    universityPrivacy
+    studentPrivacy: studentPrivacy.replace(/(\n)(\s)/g, ''),
+    studentTerms: studentTerms.replace(/(\n)(\s)/g, ''),
+    universityPrivacy: universityPrivacy.replace(/(\n)(\s)/g, '')
 };
 
 fs.writeFile('./enlightened_privacy.json', JSON.stringify(data), err => {
