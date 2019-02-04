@@ -1,7 +1,7 @@
 var fs = require('fs');
 
 var studentPrivacy = fs.readFileSync('./student-privacy/index.html', 'utf8');
-var studentTerms = fs.readFileSync('./student-privacy/index.html', 'utf8');
+var studentTerms = fs.readFileSync('./student-terms/index.html', 'utf8');
 var universityPrivacy = fs.readFileSync('./university-privacy/index.html', 'utf8');
 
 var data = {
