@@ -1,10 +1,12 @@
 var fs = require('fs');
 
-var studentPrivacy = fs.readFileSync('./student-privacy/index.html', 'utf8');
-var studentTerms = fs.readFileSync('./student-terms/index.html', 'utf8');
-var universityPrivacy = fs.readFileSync('./university-privacy/index.html', 'utf8');
+var studentPrivacyIntro = fs.readFileSync('./student_other/your_privacy.html', 'utf8');
+var studentPrivacy = fs.readFileSync('./student_privacy/index.html', 'utf8');
+var studentTerms = fs.readFileSync('./student_terms/index.html', 'utf8');
+var universityPrivacy = fs.readFileSync('./university_privacy/index.html', 'utf8');
 
 var data = {
+    studentPrivacyIntro: studentPrivacyIntro.replace(/(\n)(\s)/g, ''),
     studentPrivacy: studentPrivacy.replace(/(\n)(\s)/g, ''),
     studentTerms: studentTerms.replace(/(\n)(\s)/g, ''),
     universityPrivacy: universityPrivacy.replace(/(\n)(\s)/g, '')
