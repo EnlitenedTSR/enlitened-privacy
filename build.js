@@ -12,7 +12,7 @@ var data = {
     universityPrivacy: universityPrivacy.replace(/(\n)(\s)/g, '')
 };
 
-fs.writeFile('./enlightened_privacy.json', JSON.stringify(data), err => {
+fs.writeFile('./enlitened_privacy.json', JSON.stringify(data), err => {
     if (!err) {
         console.log('File compiled');
     }
