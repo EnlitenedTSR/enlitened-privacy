@@ -4,6 +4,7 @@ steps:
       - "buildkite-aws-stack=*"    
     plugins:
       docker-compose#v2.6.0:
+        config: .docker/docker-compose.yml
         run: enlitened-privacy
 
   - wait
