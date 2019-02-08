@@ -6,3 +6,4 @@ steps:
     plugins:
       thedyrt/git-commit#v0.3.0:
         branch: master
+        remote: upstream
