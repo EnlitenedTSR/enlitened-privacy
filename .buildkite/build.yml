@@ -9,9 +9,10 @@ steps:
 
   - wait
 
-  - name: "Commit built images"
+  - name: "Commit built output"
     agents:
       - "buildkite-aws-stack=*"
+    command: time
     plugins:
       thedyrt/git-commit#v0.3.0:
         branch: master
