@@ -1,0 +1,16 @@
+steps:
+  - name: ":docker: Create content"
+    agents:
+      - "buildkite-aws-stack=*"    
+    plugins:
+      docker-compose#v2.6.0:
+          run: enlitened-privacy
+
+  - wait
+
+  - name: "Commit built images"
+    agents:
+      - "buildkite-aws-stack=*"
+    plugins:
+      thedyrt/git-commit#v0.3.0: ~
+        branch: master
