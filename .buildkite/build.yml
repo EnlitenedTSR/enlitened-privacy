@@ -1,18 +1,8 @@
 steps:
   - name: ":docker: Create content"
     agents:
-      - "buildkite-aws-stack=*"    
-    plugins:
-      docker-compose#v2.6.0:
-        config: .docker/docker-compose.yml
-        run: enlitened-privacy
-
-  - wait
-
-  - name: "Commit built output"
-    agents:
       - "buildkite-aws-stack=*"
-    command: time
+    command: docker-compose -f .docker/docker-compose.yml run enlitened-privacy
     plugins:
       thedyrt/git-commit#v0.3.0:
         branch: master
