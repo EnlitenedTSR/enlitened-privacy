@@ -4,7 +4,7 @@ steps:
       - "buildkite-aws-stack=*"    
     plugins:
       docker-compose#v2.6.0:
-          run: enlitened-privacy
+        run: enlitened-privacy
 
   - wait
 
@@ -12,5 +12,5 @@ steps:
     agents:
       - "buildkite-aws-stack=*"
     plugins:
-      thedyrt/git-commit#v0.3.0: ~
+      thedyrt/git-commit#v0.3.0:
         branch: master
